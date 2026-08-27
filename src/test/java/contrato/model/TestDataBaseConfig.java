@@ -3,6 +3,7 @@ package contrato.model;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.contrato.model.persistence.DataBaseConfig;
+import org.contrato.model.persistence.DatabaseConnection;
 import org.junit.jupiter.api.Test;
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -14,7 +15,7 @@ public class TestDataBaseConfig {
     public void DuplicationConnectionError(){
 
         DataBaseConfig db1 = DataBaseConfig.getInstance("postgres","1234");
-        DataBaseConfig db2 = DataBaseConfig.getInstance("postgres","1234");
+        DataBaseConfig db2 = DataBaseConfig.getInstance("postgress","1234");
 
         assertSame(db1, db2, "Error: Estas duplicando la base de datos");
     }
