@@ -8,10 +8,17 @@ public record FechaFin(String fecha) {
 
     public FechaFin{
         validarFechaNula(fecha);
+        validarFechaVacia(fecha);
         validarFormatoFechaInvalida(fecha);
-
     }
 
+
+
+    private static void validarFechaVacia(final String fecha){
+        if (fecha.isEmpty()) {
+            throw ParametrosVaciosExcepcion.parametroVacio(fecha);
+        }
+    }
 
 
     public static void validarFormatoFechaInvalida(final String fecha){
