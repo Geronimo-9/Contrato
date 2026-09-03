@@ -4,7 +4,7 @@ import org.contrato.model.domain.exception.ValoresNegativosExcepcion;
 
 public class Monto {
 
-    public double monto;
+    private double monto;
 
 
 
@@ -12,12 +12,6 @@ public class Monto {
         setMonto(monto);
     }
 
-
-
-
-    public double getMonto() {
-        return monto;
-    }
 
     public void setMonto(double monto) {
         validarNegativos(monto);

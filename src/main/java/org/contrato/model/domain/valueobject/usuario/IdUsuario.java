@@ -9,8 +9,8 @@ import java.util.Objects;
 public record IdUsuario(String valores) {
 
 
-    public static final String CANTIDAD_DIGITO_CEDULA = "^\\d{10}$";
-    public static final String CANTIDAD_NULA =  null;
+    private static final String CANTIDAD_DIGITO_CEDULA = "^\\d{10}$";
+    private static final String CANTIDAD_NULA =  null;
 
     public IdUsuario{
 
@@ -25,24 +25,24 @@ public record IdUsuario(String valores) {
 
 
 
-    public static void validarSinEmpezar(final String normalizarValor){
+    private static void validarSinEmpezar(final String normalizarValor){
         if (normalizarValor.isEmpty()) {
             throw ParametrosVaciosExcepcion.parametroVacio(normalizarValor);
         }
     }
 
 
-public static void validarCantidadRequerida(final String valores){
-        if (!valores.matches(CANTIDAD_DIGITO_CEDULA)){
-            throw CantidadRequeridaExcepcion.cantidadRequerida(valores);
-        }
-}
-
-public static void validarValorNulo(final String valores){
-    if (valores.equals(CANTIDAD_NULA)) {
-        throw ParametrosVaciosExcepcion.parametroNulo(valores);
+    private static void validarCantidadRequerida(final String valores){
+            if (!valores.matches(CANTIDAD_DIGITO_CEDULA)){
+                throw CantidadRequeridaExcepcion.cantidadRequerida(valores);
+            }
     }
-}
+
+    private static void validarValorNulo(final String valores){
+        if (valores.equals(CANTIDAD_NULA)) {
+            throw ParametrosVaciosExcepcion.parametroNulo(valores);
+        }
+    }
 
 
 

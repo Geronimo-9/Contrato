@@ -1,6 +1,7 @@
 package org.contrato.model.domain.valueobject.contrato;
 
-public enum Estado {
+enum Estado {
     VENCIDO,
     VIGENTE,
+
 }

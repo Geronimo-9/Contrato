@@ -5,7 +5,7 @@ import org.contrato.model.domain.exception.ParametrosVaciosExcepcion;
 
 public record FechaInicio(String fecha) {
 
-    public static final String FORMATO_FECHA = "\\d{2}/\\d{2}/\\d{4}"; //dd/mm/aaaa
+    private static final String FORMATO_FECHA = "\\d{2}/\\d{2}/\\d{4}"; //dd/mm/aaaa
 
     public FechaInicio{
         validarFechaNula(fecha);
@@ -21,7 +21,7 @@ public record FechaInicio(String fecha) {
         }
     }
 
-    public static void validarFormatoFechaInvalida(final String fecha){
+    private static void validarFormatoFechaInvalida(final String fecha){
         if (!fecha.matches(FORMATO_FECHA)) {
             throw FormatoInvalidoExcepcion.formatoIncorrecto(fecha);
         }
