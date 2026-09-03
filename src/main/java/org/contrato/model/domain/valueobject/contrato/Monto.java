@@ -1,6 +1,5 @@
 package org.contrato.model.domain.valueobject.contrato;
 
-import org.contrato.model.domain.exception.ParametrosVaciosExcepcion;
 import org.contrato.model.domain.exception.ValoresNegativosExcepcion;
 
 public class Monto {
@@ -27,7 +26,7 @@ public class Monto {
 
 
     private static void validarNegativos(double monto){
-        if(monto<=0){
+        if(monto<0){
             throw ValoresNegativosExcepcion.valorNegativo(monto);
         }
 
