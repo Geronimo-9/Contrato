@@ -1,6 +1,6 @@
 package org.contrato.model.domain.valueobject.usuario;
 
-public enum RolUsuario {
+ enum RolUsuario {
     EMPRESA,
     USUARIO,
     PENDIENTE

@@ -19,4 +19,6 @@ public class ParametrosVaciosExcepcion extends DomainException {
         return new ParametrosVaciosExcepcion(String.format(PARAMETRO_NULO, valorInvalido));
     }
 
+
+
 }

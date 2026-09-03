@@ -8,7 +8,7 @@ import java.util.Objects;
 
 public record NombreUsuario(String valores) {
 
-    public static final String SOLO_LETRAS = "^[a-zA-Z]+$";
+    private static final String SOLO_LETRAS = "^[a-zA-Z]+$";
 
 
     public NombreUsuario{
@@ -22,13 +22,15 @@ public record NombreUsuario(String valores) {
 
 
 
-    public static void validarSinEmpezar(final String normalizarValor){
+
+
+    private static void validarSinEmpezar(final String normalizarValor){
         if (normalizarValor.isEmpty()) {
             throw ParametrosVaciosExcepcion.parametroVacio(normalizarValor);
         }
     }
 
-    public static void validarSoloLetras(final String valores){
+    private static void validarSoloLetras(final String valores){
         if (!valores.matches(SOLO_LETRAS)){
             throw FormatoInvalidoExcepcion.formatoIncorrecto(valores);
         }
