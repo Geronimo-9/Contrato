@@ -1,6 +1,7 @@
 package org.contrato.model.domain.valueobject.contrato;
 
 import org.contrato.model.domain.exception.ValoresNegativosExcepcion;
+import org.contrato.model.domain.exception.ValoresNulosExcepcion;
 
 public class Monto {
 
@@ -17,6 +18,7 @@ public class Monto {
         validarNegativos(monto);
         this.monto = monto;
     }
+
 
 
     private static void validarNegativos(double monto){
