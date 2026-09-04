@@ -5,7 +5,7 @@ import org.contrato.model.domain.exception.ValoresNulosExcepcion;
 
 public record Funciones(String texto) {
 
-
+    private static final String CANTIDAD_NULA =  null;
 
     public Funciones{
     validarCampoNulo(texto);
@@ -16,7 +16,7 @@ public record Funciones(String texto) {
     }
 
     private static void validarCampoNulo(String valores){
-        if (valores == null) {
+        if (valores == CANTIDAD_NULA) {
             throw ValoresNulosExcepcion.parametroNulo(valores);
         }
     }
