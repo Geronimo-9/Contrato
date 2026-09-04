@@ -1,10 +1,11 @@
 package org.contrato.model.domain.exception;
 
 
+import java.time.LocalDate;
 
 public class FechaInvalidaExcepcion extends DomainException{
 
-    protected static final String PLAZOS_INCONSISTENTE = "Los plazos presentan inconsistencias";
+    protected static final String PLAZOS_INCONSISTENTE = "Los plazos presentan inconsistencias. Asegurese que el rango de tiempo sean validos";
 
 
 
@@ -13,8 +14,8 @@ public class FechaInvalidaExcepcion extends DomainException{
     }
 
 
-    public static FechaInvalidaExcepcion fechaInconsistente(String fecha){
-        return new FechaInvalidaExcepcion(String.format(PLAZOS_INCONSISTENTE, fecha));
+    public static FechaInvalidaExcepcion fechaInconsistente(){
+        return new FechaInvalidaExcepcion(String.format(PLAZOS_INCONSISTENTE));
     }
 
 
