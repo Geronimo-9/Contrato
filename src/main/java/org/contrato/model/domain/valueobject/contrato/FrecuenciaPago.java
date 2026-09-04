@@ -1,6 +1,6 @@
 package org.contrato.model.domain.valueobject.contrato;
 
-enum FrecuenciaPago {
+public enum FrecuenciaPago {
     QUINCENAL,
     SEMANAL,
     MENSUAL,
