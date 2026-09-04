@@ -1,6 +1,7 @@
 package org.contrato.model.domain.valueobject.contrato;
 
 import org.contrato.model.domain.exception.ParametrosVaciosExcepcion;
+import org.contrato.model.domain.exception.ValoresNulosExcepcion;
 
 public record Funciones(String texto) {
 
@@ -16,7 +17,7 @@ public record Funciones(String texto) {
 
     private static void validarCampoNulo(String valores){
         if (valores == null) {
-            throw ParametrosVaciosExcepcion.parametroNulo(valores);
+            throw ValoresNulosExcepcion.parametroNulo(valores);
         }
     }
 
