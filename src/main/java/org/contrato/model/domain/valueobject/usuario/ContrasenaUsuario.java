@@ -2,6 +2,7 @@ package org.contrato.model.domain.valueobject.usuario;
 
 import org.contrato.model.domain.exception.CantidadRequeridaExcepcion;
 import org.contrato.model.domain.exception.ParametrosVaciosExcepcion;
+import org.contrato.model.domain.exception.ValoresNulosExcepcion;
 
 public record ContrasenaUsuario(String valores) {
 
@@ -28,7 +29,7 @@ public record ContrasenaUsuario(String valores) {
 
     private static void validarCampoNulo(String valores){
         if (valores == CONTRASEÑA_NULA) {
-            throw ParametrosVaciosExcepcion.parametroNulo(valores);
+            throw ValoresNulosExcepcion.parametroNulo(valores);
         }
     }
 

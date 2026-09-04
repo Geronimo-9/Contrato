@@ -2,6 +2,7 @@ package org.contrato.model.domain.valueobject.usuario;
 
 import org.contrato.model.domain.exception.CantidadRequeridaExcepcion;
 import org.contrato.model.domain.exception.ParametrosVaciosExcepcion;
+import org.contrato.model.domain.exception.ValoresNulosExcepcion;
 
 import java.util.Objects;
 
@@ -40,7 +41,7 @@ public record IdUsuario(String valores) {
 
     private static void validarValorNulo(final String valores){
         if (valores.equals(CANTIDAD_NULA)) {
-            throw ParametrosVaciosExcepcion.parametroNulo(valores);
+            throw ValoresNulosExcepcion.parametroNulo(valores);
         }
     }
 
