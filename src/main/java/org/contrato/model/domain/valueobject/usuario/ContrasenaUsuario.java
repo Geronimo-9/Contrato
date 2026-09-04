@@ -21,7 +21,7 @@ public record ContrasenaUsuario(String valores) {
 
 
     private static void validarTamañoParametro(String valores){
-        if (valores.length() <= MINIMA_LONGITUD || MAXIMA_LONGITUD <= valores.length()) {
+        if (valores.length() < MINIMA_LONGITUD || MAXIMA_LONGITUD < valores.length()) {
             throw CantidadRequeridaExcepcion.fueraDeRango(valores);
         }
     }
