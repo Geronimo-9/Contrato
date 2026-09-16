@@ -13,12 +13,6 @@ ContrasenaUsuario contrasena;
 RolUsuario rol;
 
 
-    public Usuario(IdUsuario id, NombreUsuario nombre, ContrasenaUsuario contrasena, RolUsuario rol){
-        this.id = id;
-        this.nombre = nombre;
-        this.contrasena = contrasena;
-        this.rol = rol;
-    }
 
 
     public IdUsuario getId() {
@@ -37,20 +31,22 @@ RolUsuario rol;
         return rol;
     }
 
+    public void setId(IdUsuario id) {
+        this.id = id;
+    }
 
-    public Usuario crearUsuario(IdUsuario id, NombreUsuario nombre, ContrasenaUsuario contrasena, RolUsuario rol){
-        return new Usuario(id,nombre,contrasena, RolUsuario.PENDIENTE);
-    };
+    public void setNombre(NombreUsuario nombre) {
+        this.nombre = nombre;
+    }
 
+    public void setContrasena(ContrasenaUsuario contrasena) {
+        this.contrasena = contrasena;
+    }
 
-    public Usuario crearUsuarioNormal(IdUsuario id, NombreUsuario nombre, ContrasenaUsuario contrasena, RolUsuario rol){
-        return new Usuario(id,nombre,contrasena, RolUsuario.USUARIO);
-    };
+    public void setRol(RolUsuario rol) {
+        this.rol = rol;
+    }
 
-
-    public Usuario crearUsuarioEmpresa(IdUsuario id, NombreUsuario nombre, ContrasenaUsuario contrasena, RolUsuario rol){
-        return new Usuario(id,nombre,contrasena, RolUsuario.EMPRESA);
-    };
 
 
 

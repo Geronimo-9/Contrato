@@ -3,11 +3,12 @@ package org.contrato.model.domain.entity;
 
 import org.contrato.model.domain.exception.FechaInvalidaExcepcion;
 import org.contrato.model.domain.valueobject.contrato.*;
-
+import org.contrato.model.domain.valueobject.usuario.IdUsuario;
 
 
 public class Contrato{
 
+    IdUsuario idUsuario; //---Foreing Key
     Empresa empresa;
     Empleado empleado;
     Funciones funciones;
@@ -18,10 +19,12 @@ public class Contrato{
     FechaFin fechaFin;
     Estado estado;
 
-
+    public Contrato() {
+    }
 
     //Creacion de Contrato Sin estados
-    public Contrato(Empresa empresa,
+    public Contrato(IdUsuario idUsuario,
+                    Empresa empresa,
                     Empleado empleado,
                     Funciones funciones,
                     Monto monto,
@@ -30,6 +33,7 @@ public class Contrato{
                     FechaInicio fechaInicio,
                     FechaFin fechaFin,
                     Estado estado) {
+        this.idUsuario = idUsuario;
         this.empresa = empresa;
         this.empleado = empleado;
         this.funciones = funciones;
@@ -42,7 +46,8 @@ public class Contrato{
     }
 
     // Contrato cuando está diligenciado
-    public Contrato(Empresa empresa,
+    public Contrato(IdUsuario idUsuario,
+                    Empresa empresa,
                     Empleado empleado,
                     Funciones funciones,
                     Monto monto,
@@ -50,6 +55,7 @@ public class Contrato{
                     FechaFirma fechaFirma,
                     FechaInicio fechaInicio,
                     FechaFin fechaFin) {
+        this.idUsuario = idUsuario;
         this.empresa = empresa;
         this.empleado = empleado;
         this.funciones = funciones;
@@ -60,6 +66,9 @@ public class Contrato{
         this.fechaFin = fechaFin;
     }
 
+    public IdUsuario getIdUsuario() {
+        return idUsuario;
+    }
 
     public Empresa getEmpresa() {
         return empresa;
@@ -97,20 +106,57 @@ public class Contrato{
         return estado;
     }
 
+    public void setIdUsuario(IdUsuario idUsuario) {
+        this.idUsuario = idUsuario;
+    }
 
+    public void setEmpresa(Empresa empresa) {
+        this.empresa = empresa;
+    }
 
+    public void setEmpleado(Empleado empleado) {
+        this.empleado = empleado;
+    }
+
+    public void setFunciones(Funciones funciones) {
+        this.funciones = funciones;
+    }
+
+    public void setMonto(Monto monto) {
+        this.monto = monto;
+    }
+
+    public void setFrecuenciaPago(FrecuenciaPago frecuenciaPago) {
+        this.frecuenciaPago = frecuenciaPago;
+    }
+
+    public void setFechaFirma(FechaFirma fechaFirma) {
+        this.fechaFirma = fechaFirma;
+    }
+
+    public void setFechaInicio(FechaInicio fechaInicio) {
+        this.fechaInicio = fechaInicio;
+    }
+
+    public void setFechaFin(FechaFin fechaFin) {
+        this.fechaFin = fechaFin;
+    }
+
+    public void setEstado(Estado estado) {
+        this.estado = estado;
+    }
 
     public Contrato crearContrato(){
-        return new Contrato(empresa,empleado,funciones,monto,frecuenciaPago,fechaFirma,fechaInicio,fechaFin);
+        return new Contrato(idUsuario,empresa,empleado,funciones,monto,frecuenciaPago,fechaFirma,fechaInicio,fechaFin);
     }
 
     public Contrato contratoVencido(){
-        return new Contrato(empresa,empleado,funciones,monto,frecuenciaPago,fechaFirma,fechaInicio,fechaFin,Estado.VENCIDO);
+        return new Contrato(idUsuario,empresa,empleado,funciones,monto,frecuenciaPago,fechaFirma,fechaInicio,fechaFin,Estado.VENCIDO);
     }
 
 
     public Contrato contratoVigente(){
-        return new Contrato(empresa,empleado,funciones,monto,frecuenciaPago,fechaFirma,fechaInicio,fechaFin,Estado.VIGENTE);
+        return new Contrato(idUsuario,empresa,empleado,funciones,monto,frecuenciaPago,fechaFirma,fechaInicio,fechaFin,Estado.VIGENTE);
 
     }
 

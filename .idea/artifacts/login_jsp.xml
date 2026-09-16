@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact name="login_jsp">
+    <output-path>$PROJECT_DIR$/out/artifacts/login_jsp</output-path>
+    <root id="root">
+      <element id="file-copy" path="$PROJECT_DIR$/web/login.jsp" />
+      <element id="artifact" artifact-name="web" />
+    </root>
+  </artifact>
+</component>

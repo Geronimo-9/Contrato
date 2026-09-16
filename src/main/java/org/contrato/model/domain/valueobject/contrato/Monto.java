@@ -14,6 +14,10 @@ public class Monto {
     }
 
 
+    public double getMonto() {
+        return monto;
+    }
+
     public void setMonto(double monto) {
         validarNegativos(monto);
         this.monto = monto;

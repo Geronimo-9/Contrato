@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class ValoresNulosExcepcion extends DomainException {
 
-    public static final String PARAMETRO_NULO = "El parametro '%s' está nulo";
+    public static final String PARAMETRO_NULO = "El parametro '%s' esta nulo";
     
     
     public ValoresNulosExcepcion(String message) {
