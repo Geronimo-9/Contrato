@@ -3,6 +3,10 @@
   <component name="WebContextManager">
     <option name="state">
       <map>
+        <entry key="file://$PROJECT_DIR$/web/contrato/buscarContrato.jsp" value="file://$PROJECT_DIR$/web/contrato" />
+        <entry key="file://$PROJECT_DIR$/web/contrato/modificarContrato.jsp" value="file://$PROJECT_DIR$/web/contrato" />
+        <entry key="file://$PROJECT_DIR$/web/contrato/modificarContrato2.jsp" value="file://$PROJECT_DIR$/web/contrato" />
+        <entry key="file://$PROJECT_DIR$/web/usuario/eliminar.jsp" value="file://$PROJECT_DIR$/web/usuario" />
         <entry key="file://$PROJECT_DIR$/web/usuario/modificar.jsp" value="file://$PROJECT_DIR$/web/usuario" />
       </map>
     </option>

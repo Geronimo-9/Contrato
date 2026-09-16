@@ -2,12 +2,32 @@
   <artifact type="exploded-war" name="Contrato:Web exploded">
     <output-path>$PROJECT_DIR$/out/artifacts/Contrato_Web_exploded</output-path>
     <root id="root">
-      <element id="javaee-facet-resources" facet="Contrato/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="Contrato" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.postgresql:postgresql:42.7.3" />
+          <element id="library" level="project" name="Maven: com.itextpdf:commons:7.2.5" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.36" />
+          <element id="library" level="project" name="Maven: org.glassfish.web:jakarta.servlet.jsp.jstl:3.0.1" />
+          <element id="library" level="project" name="Maven: org.eclipse.angus:angus-activation:2.0.2" />
+          <element id="library" level="project" name="Maven: jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:3.0.0" />
+          <element id="library" level="project" name="Maven: org.bouncycastle:bcutil-jdk15on:1.70" />
+          <element id="library" level="project" name="Maven: org.checkerframework:checker-qual:3.42.0" />
+          <element id="library" level="project" name="Maven: jakarta.el:jakarta.el-api:5.0.0" />
+          <element id="library" level="project" name="Maven: com.itextpdf:layout:7.2.5" />
+          <element id="library" level="project" name="Maven: com.itextpdf:io:7.2.5" />
+          <element id="library" level="project" name="Maven: com.itextpdf:kernel:7.2.5" />
+          <element id="library" level="project" name="Maven: jakarta.activation:jakarta.activation-api:2.1.3" />
+          <element id="library" level="project" name="Maven: jakarta.mail:jakarta.mail-api:2.1.3" />
+          <element id="library" level="project" name="Maven: org.eclipse.angus:jakarta.mail:2.0.3" />
+          <element id="library" level="project" name="Maven: org.bouncycastle:bcprov-jdk15on:1.70" />
+          <element id="library" level="project" name="Maven: org.bouncycastle:bcpkix-jdk15on:1.70" />
+        </element>
+        <element id="artifact" artifact-name="login_jsp" />
       </element>
+      <element id="artifact" artifact-name="web" />
     </root>
   </artifact>
 </component>
