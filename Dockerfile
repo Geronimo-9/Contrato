@@ -1,10 +1,16 @@
-FROM maven:3.8.5-openjdk-17 AS build
+FROM maven:3.9-eclipse-temurin-17 AS build
 WORKDIR /app
-COPY . .
+
+COPY pom.xml .
+COPY src ./src
+COPY web ./web
+
 RUN mvn clean package -DskipTests
 
-FROM eclipse-temurin:17-jre
-WORKDIR /app
-COPY --from=build /app/target/*.jar app.jar
+FROM tomcat:11-jdk17-temurin
+
+COPY --from=build /app/target/*.war /usr/local/tomcat/webapps/ROOT.war
+
 EXPOSE 8080
-CMD ["java", "-jar", "app.jar"]
+
+CMD ["catalina.sh", "run"]
